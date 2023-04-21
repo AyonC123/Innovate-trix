@@ -1,7 +1,26 @@
+import AdminCard from "@/components/AdminCard";
 import Sidebar from "@/components/Sidebar";
 import Link from "next/link";
+import { useState } from "react";
 
-export default function Admin() {
+export async function getServerSideProps(context) {
+	let res = await fetch("http://localhost:3000/api/products", {
+		method: "GET",
+		headers: {
+			"Content-Type": "application/json",
+		},
+	});
+	let products = await res.json();
+	return {
+		props: { products },
+	};
+}
+
+export default function Admin({ products }) {
+	const [Search, setSearch] = useState("");
+	const data = products.filter((item) => {
+		return item.title.toLowerCase().includes(Search.toLowerCase()) == true;
+	});
 	return (
 		<>
 			<div
@@ -9,16 +28,30 @@ export default function Admin() {
 				style={{ gridTemplateColumns: "30px 1fr" }}
 			>
 				<Sidebar />
-				<div className="flex flex-col px-10">
-					<div>
+				<div className="flex flex-col px-10 gap-5">
+					<div className="flex justify-between">
 						<Link
 							href="admin/create"
 							className="p-2 rounded text-white bg-blue-500"
 						>
 							Create
 						</Link>
+						<form onSubmit={(e) => e.preventDefault()}>
+							<input
+								type="text"
+								name="search"
+								value={Search}
+								onChange={(e) => setSearch(e.target.value)}
+								className="rounded p-2"
+								placeholder="Search"
+							/>
+						</form>
 					</div>
-					<div></div>
+					<div className="flex justify-between">
+						<h1>Name</h1>
+						<h1>Price</h1>
+					</div>
+					<AdminCard data={data} />
 				</div>
 			</div>
 		</>

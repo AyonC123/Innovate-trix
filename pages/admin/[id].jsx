@@ -1,17 +1,31 @@
+import { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useState } from "react";
 
-export default function Create() {
-	const [Photo, setPhoto] = useState("");
-	const [Title, setTitle] = useState("");
-	const [Description, setDescription] = useState("");
-	const [Price, setPrice] = useState("");
+export const getServerSideProps = async (context) => {
+	const id = context.params.id;
+	let res = await fetch(`http://localhost:3000/api/products/${id}`, {
+		method: "GET",
+		headers: {
+			"Content-Type": "application/json",
+		},
+	});
+	let product = await res.json();
+	return {
+		props: { product, id },
+	};
+};
+
+export default function Product({ product, id }) {
+	const [Photo, setPhoto] = useState(product["image"]);
+	const [Title, setTitle] = useState(product["title"]);
+	const [Description, setDescription] = useState(product["description"]);
+	const [Price, setPrice] = useState(product["price"]);
 	const router = useRouter();
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		let res = await fetch("http://localhost:3000/api/products", {
+		let res = await fetch(`http://localhost:3000/api/products/${id}`, {
 			method: "POST",
 			body: JSON.stringify({
 				image: Photo,
