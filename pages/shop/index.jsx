@@ -16,6 +16,7 @@ export async function getServerSideProps(context) {
 
 export default function Products({ products }) {
 	const [Search, setSearch] = useState("");
+
 	const data = products.filter((item) => {
 		return item.title.toLowerCase().includes(Search.toLowerCase()) == true;
 	});

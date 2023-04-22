@@ -45,7 +45,7 @@ export default function Product({ product, id }) {
 	return (
 		<>
 			<div className="flex justify-between">
-				<div>
+				<div className="flex flex-col">
 					{Photo !== "" ? (
 						<Image alt="product image" src={Photo} width={250} height={250} />
 					) : (

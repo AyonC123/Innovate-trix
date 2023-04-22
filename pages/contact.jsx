@@ -1,7 +1,7 @@
 export default function Contact() {
 	return (
 		<>
-			<h1>Contact</h1>
+			<div className="flex justify-center"></div>
 		</>
 	);
 }
