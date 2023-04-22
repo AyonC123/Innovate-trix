@@ -13,6 +13,7 @@ module.exports = {
 			secondary: "#1C2A4F",
 			tertiary: "#1C2A4F",
 			white: "#ffffff",
+			grey: "#969696",
 		},
 		extend: {
 			backgroundImage: {
