@@ -2,7 +2,8 @@ import ProductCard from "@/components/ProductCard";
 import { useState } from "react";
 
 export async function getServerSideProps(context) {
-	let res = await fetch("http://localhost:3000/api/products", {
+	const hostname = context.req.headers.host;
+	let res = await fetch(`http://${hostname}/api/products`, {
 		method: "GET",
 		headers: {
 			"Content-Type": "application/json",
