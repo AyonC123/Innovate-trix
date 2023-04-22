@@ -2,7 +2,8 @@ import Image from "next/image";
 
 export async function getServerSideProps(context) {
 	let id = context.params.id;
-	let res = await fetch(`http://localhost:3000/api/products/${id}`, {
+	const hostname = context.req.headers.host;
+	let res = await fetch(`http://${hostname}/api/products/${id}`, {
 		method: "GET",
 		headers: {
 			"Content-Type": "application/json",
