@@ -14,11 +14,16 @@ export default async function handler(req, res) {
 			break;
 		case "POST":
 			let bodyObject = JSON.parse(req.body);
-			console.log(req.body);
 			let update = await db
 				.collection("products")
 				.updateOne({ _id: new ObjectId(id) }, { $set: bodyObject }, {});
 			res.json(update);
+			break;
+		case "DELETE":
+			let remove = await db
+				.collection("products")
+				.deleteOne({ _id: new ObjectId(id) });
+			res.json(remove);
 			break;
 	}
 }

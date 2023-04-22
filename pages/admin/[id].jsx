@@ -34,7 +34,12 @@ export default function Product({ product, id }) {
 				price: Price,
 			}),
 		});
-		res = await res.json();
+		router.push("/admin");
+	};
+	const handleDelete = async (e) => {
+		let res = await fetch(`http://localhost:3000/api/products/${id}`, {
+			method: "DELETE",
+		});
 		router.push("/admin");
 	};
 	return (
@@ -50,42 +55,45 @@ export default function Product({ product, id }) {
 					<p>{Description}</p>
 					<h1>{Price}</h1>
 				</div>
-				<form onSubmit={handleSubmit} method="post">
-					<input
-						type="text"
-						name="image"
-						id=""
-						value={Photo}
-						onChange={(e) => setPhoto(e.target.value)}
-						placeholder="Image"
-					/>
-					<input
-						type="text"
-						name="name"
-						id=""
-						value={Title}
-						onChange={(e) => setTitle(e.target.value)}
-						placeholder="Name"
-					/>
-					<textarea
-						name="description"
-						id=""
-						cols="30"
-						rows="10"
-						value={Description}
-						onChange={(e) => setDescription(e.target.value)}
-						placeholder="Description"
-					></textarea>
-					<input
-						type="text"
-						name="price"
-						value={Price}
-						onChange={(e) => setPrice(e.target.value)}
-						placeholder="Price"
-					/>
+				<div>
+					<form onSubmit={handleSubmit} method="post">
+						<input
+							type="text"
+							name="image"
+							id=""
+							value={Photo}
+							onChange={(e) => setPhoto(e.target.value)}
+							placeholder="Image"
+						/>
+						<input
+							type="text"
+							name="name"
+							id=""
+							value={Title}
+							onChange={(e) => setTitle(e.target.value)}
+							placeholder="Name"
+						/>
+						<textarea
+							name="description"
+							id=""
+							cols="30"
+							rows="10"
+							value={Description}
+							onChange={(e) => setDescription(e.target.value)}
+							placeholder="Description"
+						></textarea>
+						<input
+							type="text"
+							name="price"
+							value={Price}
+							onChange={(e) => setPrice(e.target.value)}
+							placeholder="Price"
+						/>
 
-					<button type="submit">submit</button>
-				</form>
+						<button type="submit">submit</button>
+					</form>
+					<button onClick={handleDelete}>Delete</button>
+				</div>
 			</div>
 		</>
 	);
