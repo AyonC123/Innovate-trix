@@ -20,7 +20,7 @@ export default function Create({ hostname }) {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		let res = await fetch(`http://${hostname}/api/products`, {
+		let res = await fetch(`https://${hostname}/api/products`, {
 			method: "POST",
 			body: JSON.stringify({
 				image: Photo,
