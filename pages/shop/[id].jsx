@@ -18,13 +18,13 @@ export async function getServerSideProps(context) {
 export default function Product({ product }) {
 	return (
 		<>
-			<div className="flex justify-around items-center text-center">
+			<div className="flex flex-wrap justify-around items-center text-center">
 				<Image
 					src={product.image}
 					alt="product image"
 					height={409}
 					width={428}
-					className="rounded-lg"
+					className="rounded-lg pb-10"
 				/>
 				<div className="w-96 h-96 flex flex-col justify-between">
 					<div>

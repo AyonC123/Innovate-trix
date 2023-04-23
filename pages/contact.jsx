@@ -77,6 +77,7 @@ export default function Contact({ hostname }) {
 							value={Name}
 							onChange={(e) => setName(e.target.value)}
 							className="p-2 rounded-lg outline-none m-5"
+							required={true}
 						/>
 						<input
 							type="text"
@@ -85,6 +86,7 @@ export default function Contact({ hostname }) {
 							value={Email}
 							onChange={(e) => setEmail(e.target.value)}
 							className="p-2 rounded-lg outline-none m-5"
+							required={true}
 						/>
 						<input
 							type="text"
@@ -93,6 +95,7 @@ export default function Contact({ hostname }) {
 							value={Subject}
 							onChange={(e) => setSubject(e.target.value)}
 							className="p-2 rounded-lg outline-none m-5"
+							required={true}
 						/>
 					</div>
 					<textarea
@@ -103,6 +106,7 @@ export default function Contact({ hostname }) {
 						className="p-2 rounded-lg outline-none resize-none"
 						value={Message}
 						onChange={(e) => setMessage(e.target.value)}
+						required={true}
 					/>
 					<button
 						type="submit"

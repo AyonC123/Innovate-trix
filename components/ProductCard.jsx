@@ -6,7 +6,10 @@ export default function ProductCard({ data }) {
 		<>
 			<div className="flex flex-wrap justify-evenly">
 				{data.map((item) => (
-					<div key={item._id} className="flex flex-col">
+					<div
+						key={item._id}
+						className="flex flex-col p-5 py-6 shadow-lg rounded-lg"
+					>
 						<Image
 							src={item.image}
 							alt="product image"

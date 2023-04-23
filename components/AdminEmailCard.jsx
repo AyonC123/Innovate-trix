@@ -1,10 +1,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
 export default function AdminEmailCard({ data }) {
-	const [Open, setOpen] = useState(false);
 	return (
 		<>
 			{data.map((item) => (
