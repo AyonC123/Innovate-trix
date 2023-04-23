@@ -10,7 +10,7 @@ export default function Navbar({ session }) {
 	};
 	return (
 		<nav className="flex justify-between p-10 items-center text-center sticky top-0 backdrop-blur-md text-primary">
-			<h1 className="text-xl font-bold">NuxeWear</h1>
+			<h1 className="text-xl font-bold">Sprayons</h1>
 			<ul className="flex gap-10">
 				<li className="hover:font-bold ease-linear duration-150">
 					<Link href="/">Home</Link>

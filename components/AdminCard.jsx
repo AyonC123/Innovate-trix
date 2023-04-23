@@ -10,7 +10,7 @@ export default function AdminCard({ data }) {
 					className="flex text-center items-center justify-between border-t-2 border-tertiary text-tertiary py-1"
 				>
 					<Link href={`/admin/${item._id}`}>{item.title}</Link>
-					<div>₹ {item.price}</div>
+					<div>$ {item.price}</div>
 				</div>
 			))}
 		</>

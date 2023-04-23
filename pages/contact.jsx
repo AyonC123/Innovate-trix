@@ -31,7 +31,7 @@ export default function Contact({ hostname }) {
 		setName("");
 		setEmail("");
 		setSubject("");
-		setSubject("");
+		setMessage("");
 	};
 
 	return (
