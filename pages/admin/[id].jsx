@@ -13,11 +13,11 @@ export const getServerSideProps = async (context) => {
 	});
 	let product = await res.json();
 	return {
-		props: { product, id },
+		props: { product, id, hostname },
 	};
 };
 
-export default function Product({ product, id }) {
+export default function Product({ product, id, hostname }) {
 	const [Photo, setPhoto] = useState(product["image"]);
 	const [Title, setTitle] = useState(product["title"]);
 	const [Description, setDescription] = useState(product["description"]);
@@ -26,7 +26,7 @@ export default function Product({ product, id }) {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		let res = await fetch(`http://localhost:3000/api/products/${id}`, {
+		let res = await fetch(`http://${hostname}/api/products/${id}`, {
 			method: "POST",
 			body: JSON.stringify({
 				image: Photo,
@@ -38,7 +38,7 @@ export default function Product({ product, id }) {
 		router.push("/admin");
 	};
 	const handleDelete = async (e) => {
-		let res = await fetch(`http://localhost:3000/api/products/${id}`, {
+		let res = await fetch(`http://${hostname}/api/products/${id}`, {
 			method: "DELETE",
 		});
 		router.push("/admin");

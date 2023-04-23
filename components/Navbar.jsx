@@ -9,7 +9,7 @@ export default function Navbar({ session }) {
 		}
 	};
 	return (
-		<nav className="flex justify-between p-10 item-center sticky top-0 backdrop-blur-md text-primary">
+		<nav className="flex justify-between p-10 items-center text-center sticky top-0 backdrop-blur-md text-primary">
 			<h1 className="text-xl font-bold">NuxeWear</h1>
 			<ul className="flex gap-10">
 				<li className="hover:font-bold ease-linear duration-150">
@@ -31,9 +31,19 @@ export default function Navbar({ session }) {
 				</li>
 			</ul>
 			{session ? (
-				<button onClick={() => handleSignOut()}>SignOut</button>
+				<button
+					onClick={() => handleSignOut()}
+					className="p-2 bg-primary text-white rounded-lg"
+				>
+					Log Out
+				</button>
 			) : (
-				<button onClick={() => signIn()}>SignIn</button>
+				<button
+					onClick={() => signIn()}
+					className="p-2 bg-primary text-white rounded-lg"
+				>
+					Log In
+				</button>
 			)}
 		</nav>
 	);

@@ -2,7 +2,16 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useState } from "react";
 
-export default function Create() {
+export async function getServerSideProps(context) {
+	const hostname = context.req.headers.host;
+	return {
+		props: {
+			hostname,
+		},
+	};
+}
+
+export default function Create({ hostname }) {
 	const [Photo, setPhoto] = useState("");
 	const [Title, setTitle] = useState("");
 	const [Description, setDescription] = useState("");
@@ -11,7 +20,7 @@ export default function Create() {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		let res = await fetch("http://localhost:3000/api/products", {
+		let res = await fetch(`http://${hostname}/api/products`, {
 			method: "POST",
 			body: JSON.stringify({
 				image: Photo,

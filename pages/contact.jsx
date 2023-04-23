@@ -1,18 +1,37 @@
-import { NEXT_BUILTIN_DOCUMENT } from "next/dist/shared/lib/constants";
 import { useState } from "react";
 
-export default function Contact() {
+export async function getServerSideProps(context) {
+	const hostname = context.req.headers.host;
+	return {
+		props: {
+			hostname,
+		},
+	};
+}
+
+export default function Contact({ hostname }) {
 	const [Name, setName] = useState("");
 	const [Email, setEmail] = useState("");
 	const [Subject, setSubject] = useState("");
-	const [Description, setDescription] = useState("");
+	const [Message, setMessage] = useState("");
 
-	const handleSubmit = (e) => {
-		e.prevenDefault();
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		let res = await fetch(`http://${hostname}/api/emails`, {
+			method: "POST",
+			body: JSON.stringify({
+				name: Name,
+				email: Email,
+				subject: Subject,
+				message: Message,
+			}),
+		});
+		res = await res.json();
+
 		setName("");
 		setEmail("");
 		setSubject("");
-		setDescription("");
+		setSubject("");
 	};
 
 	return (
@@ -82,6 +101,8 @@ export default function Contact() {
 						cols="87"
 						placeholder="Description"
 						className="p-2 rounded-lg outline-none resize-none"
+						value={Message}
+						onChange={(e) => setMessage(e.target.value)}
 					/>
 					<button
 						type="submit"
