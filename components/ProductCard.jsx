@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function ProductCard({ data }) {
 	return (
 		<>
-			<div className="flex flex-wrap justify-evenly">
+			<div className="flex flex-wrap justify-evenly gap-5">
 				{data.map((item) => (
 					<div
 						key={item._id}

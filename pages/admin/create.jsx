@@ -103,7 +103,7 @@ export default function Create({ hostname }) {
 						required={true}
 					/>
 					<input
-						type="text"
+						type="number"
 						name="price"
 						value={Price}
 						onChange={(e) => setPrice(e.target.value)}
