@@ -50,9 +50,15 @@ export default function Product({ product, id, hostname }) {
 		router.push("/admin");
 	};
 	const handleDelete = async (e) => {
-		let res = await fetch(`http://${hostname}/api/products/${id}`, {
-			method: "DELETE",
-		});
+		if (hostname === "localhost:3000") {
+			let res = await fetch(`http://${hostname}/api/products/${id}`, {
+				method: "DELETE",
+			});
+		} else {
+			let res = await fetch(`https://${hostname}/api/products/${id}`, {
+				method: "DELETE",
+			});
+		}
 		router.push("/admin");
 	};
 	return (
