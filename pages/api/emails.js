@@ -12,5 +12,6 @@ export default async function handler(req, res) {
 		case "GET":
 			const allProducts = await db.collection("emails").find({}).toArray();
 			res.json(allProducts);
+			break;
 	}
 }

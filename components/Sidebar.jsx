@@ -5,7 +5,7 @@ import { faHouse, faNewspaper } from "@fortawesome/free-solid-svg-icons";
 
 export default function Sidebar() {
 	return (
-		<div className="flex flex-col gap-2 border-r-2 border-tertiary">
+		<div className="flex flex-col gap-2 border-r-2 border-secondary">
 			<Link
 				href="/admin"
 				className="hover:border-r-2 border-secondary text-secondary"

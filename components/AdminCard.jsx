@@ -7,7 +7,7 @@ export default function AdminCard({ data }) {
 			{data.map((item) => (
 				<div
 					key={item._id}
-					className="flex text-center items-center justify-between border-t-2 border-tertiary text-tertiary py-1"
+					className="flex text-center items-center justify-between border-t-2 border-secondary text-secondary py-1"
 				>
 					<Link href={`/admin/${item._id}`}>{item.title}</Link>
 					<div>$ {item.price}</div>

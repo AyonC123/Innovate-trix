@@ -6,7 +6,7 @@ export default function AdminEmailCard({ data }) {
 		<>
 			{data.map((item) => (
 				<div key={item._id} className="text-secondary">
-					<div className="flex text-center items-center justify-between border-t-2 border-tertiary py-2">
+					<div className="flex text-center items-center justify-between border-t-2 border-secondary py-2">
 						<h1>{item.name}</h1>
 						<h1>{item.email}</h1>
 						<h1>{item.subject}</h1>

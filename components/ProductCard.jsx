@@ -21,7 +21,7 @@ export default function ProductCard({ data }) {
 							<Link href={`/shop/${item._id}`}>
 								<h1 className="text-xs">{item.title}</h1>
 							</Link>
-							<h1 className="text-xs">₹ {item.price}</h1>
+							<h1 className="text-xs">$ {item.price}</h1>
 						</div>
 					</div>
 				))}
