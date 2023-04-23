@@ -20,16 +20,27 @@ export default function Create({ hostname }) {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		let res = await fetch(`https://${hostname}/api/products`, {
-			method: "POST",
-			body: JSON.stringify({
-				image: Photo,
-				title: Title,
-				description: Description,
-				price: Price,
-			}),
-		});
-		res = await res.json();
+		if (hostname === "localhost:3000") {
+			let res = await fetch(`http://${hostname}/api/products`, {
+				method: "POST",
+				body: JSON.stringify({
+					image: Photo,
+					title: Title,
+					description: Description,
+					price: Price,
+				}),
+			});
+		} else {
+			let res = await fetch(`https://${hostname}/api/products`, {
+				method: "POST",
+				body: JSON.stringify({
+					image: Photo,
+					title: Title,
+					description: Description,
+					price: Price,
+				}),
+			});
+		}
 		router.push("/admin");
 	};
 	return (

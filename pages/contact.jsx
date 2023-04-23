@@ -17,16 +17,27 @@ export default function Contact({ hostname }) {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		let res = await fetch(`http://${hostname}/api/emails`, {
-			method: "POST",
-			body: JSON.stringify({
-				name: Name,
-				email: Email,
-				subject: Subject,
-				message: Message,
-			}),
-		});
-		res = await res.json();
+		if (hostname === "localhost:3000") {
+			let res = await fetch(`http://${hostname}/api/emails`, {
+				method: "POST",
+				body: JSON.stringify({
+					name: Name,
+					email: Email,
+					subject: Subject,
+					message: Message,
+				}),
+			});
+		} else {
+			let res = await fetch(`https://${hostname}/api/emails`, {
+				method: "POST",
+				body: JSON.stringify({
+					name: Name,
+					email: Email,
+					subject: Subject,
+					message: Message,
+				}),
+			});
+		}
 
 		setName("");
 		setEmail("");

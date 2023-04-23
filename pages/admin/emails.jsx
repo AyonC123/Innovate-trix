@@ -1,6 +1,5 @@
 import AdminEmailCard from "@/components/AdminEmailCard";
 import Sidebar from "@/components/Sidebar";
-import Link from "next/link";
 import { useState } from "react";
 
 export async function getServerSideProps(context) {

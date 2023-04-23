@@ -26,15 +26,27 @@ export default function Product({ product, id, hostname }) {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-		let res = await fetch(`http://${hostname}/api/products/${id}`, {
-			method: "POST",
-			body: JSON.stringify({
-				image: Photo,
-				title: Title,
-				description: Description,
-				price: Price,
-			}),
-		});
+		if (hostname === "localhost:3000") {
+			let res = await fetch(`http://${hostname}/api/products/${id}`, {
+				method: "POST",
+				body: JSON.stringify({
+					image: Photo,
+					title: Title,
+					description: Description,
+					price: Price,
+				}),
+			});
+		} else {
+			let res = await fetch(`https://${hostname}/api/products/${id}`, {
+				method: "POST",
+				body: JSON.stringify({
+					image: Photo,
+					title: Title,
+					description: Description,
+					price: Price,
+				}),
+			});
+		}
 		router.push("/admin");
 	};
 	const handleDelete = async (e) => {
