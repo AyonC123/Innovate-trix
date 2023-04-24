@@ -1,16 +1,19 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function CartCard({ data, host, username }) {
+	const router = useRouter();
 	const handleSubmit = async (e, id) => {
 		if (host === "localhost:3000") {
 			let res = await fetch(`http://${host}/api/cart/${username}/${id}`, {
-				method: "POST",
+				method: "DELETE",
 			});
 		} else {
 			let res = await fetch(`https://${host}/api/${username}/${id}`, {
-				method: "POST",
+				method: "DELETE",
 			});
 		}
+		router.reload();
 	};
 	return (
 		<>
@@ -33,7 +36,7 @@ export default function CartCard({ data, host, username }) {
 						</div>
 						<button
 							className="border-2 border-secondary p-2 rounded-lg"
-							onClick={(e) => handleSubmit(e, item)}
+							onClick={(e) => handleSubmit(e, item._id)}
 						>
 							Remove
 						</button>

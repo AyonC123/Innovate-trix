@@ -21,7 +21,7 @@ export default async function handler(req, res) {
 			}
 			res.json(products);
 			break;
-		case "POST":
+		case "DELETE":
 			const getUser = await db.collection("users").findOne({ username: id[0] });
 
 			const items = getUser["cart"];

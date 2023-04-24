@@ -39,7 +39,7 @@ export default function Cart({ products, username, hostname }) {
 									</h1>
 									<div className="grid justify-between items-center gap-20 grid-cols-2">
 										<CartCard
-											data={products}
+											data={products.sort()}
 											host={hostname}
 											username={username}
 										/>
