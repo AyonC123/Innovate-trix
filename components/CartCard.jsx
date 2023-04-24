@@ -9,7 +9,7 @@ export default function CartCard({ data, host, username }) {
 				method: "DELETE",
 			});
 		} else {
-			let res = await fetch(`https://${host}/api/${username}/${id}`, {
+			let res = await fetch(`https://${host}/api/cart/${username}/${id}`, {
 				method: "DELETE",
 			});
 		}
