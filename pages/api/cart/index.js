@@ -14,7 +14,7 @@ export default async function handler(req, res) {
 			if (user === null) {
 				user = await db.collection("users").insertOne({
 					username: bodyObject["username"],
-					cart: bodyObject["item"],
+					cart: [bodyObject["item"]],
 				});
 			} else {
 				user = await db.collection("users").updateOne(
