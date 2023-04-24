@@ -47,23 +47,13 @@ export default function Create({ hostname }) {
 		<>
 			<div className="flex justify-evenly flex-wrap">
 				<div className="flex flex-col p-5 py-6 shadow-lg rounded-lg">
-					{Photo !== "" ? (
-						<Image
-							alt="product image"
-							src={Photo}
-							width={250}
-							height={250}
-							className="rounded-lg pb-2"
-						/>
-					) : (
-						<Image
-							alt="product image"
-							src="https://www.shutterstock.com/image-vector/vector-cartoon-aerosol-spray-red-600w-305970836.jpg"
-							width={250}
-							height={250}
-							className="rounded-lg pb-2"
-						/>
-					)}
+					<Image
+						alt="product image"
+						src="/images/candypink.png"
+						width={250}
+						height={250}
+						className="rounded-lg pb-2"
+					/>
 					<div className="flex justify-between">
 						{Title !== "" ? (
 							<h1 className="text-xs">{Title}</h1>
@@ -85,7 +75,6 @@ export default function Create({ hostname }) {
 					<input
 						type="text"
 						name="image"
-						id=""
 						value={Photo}
 						onChange={(e) => setPhoto(e.target.value)}
 						placeholder="Image"

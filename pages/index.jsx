@@ -8,10 +8,8 @@ export default function Home() {
 	const { data: session } = useSession();
 	return (
 		<>
-			<div className="flex justify-center text-center font-bold text-9xl text-secondary py-40">
-				<h1>Lorem Ipsum</h1>
-			</div>
-			<main className="flex justify-evenly basis-40 pb-24">
+			<div className="flex justify-center font-bold text-9xl text-secondary py-96 bg-[url('/background.jpg')] bg-contain bg-center bg-no-repeat"></div>
+			<main className="flex justify-evenly basis-40 pb-24 pt-20">
 				<Image
 					src={
 						"https://www.shutterstock.com/image-vector/vector-cartoon-aerosol-spray-red-600w-305970836.jpg"

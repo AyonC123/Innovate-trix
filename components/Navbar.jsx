@@ -1,10 +1,11 @@
 import { signIn, signOut } from "next-auth/react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Navbar({ session }) {
 	return (
 		<nav className="flex justify-between p-10 items-center text-center sticky top-0 backdrop-blur-md text-primary">
-			<h1 className="text-xl font-bold">Sprayons</h1>
+			<Image src={"/logo.png"} alt="logo image" height={30} width={125} />
 			<ul className="flex gap-10">
 				<li className="hover:font-bold ease-linear duration-150">
 					<Link href="/">Home</Link>
