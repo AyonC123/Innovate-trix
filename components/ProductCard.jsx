@@ -13,8 +13,8 @@ export default function ProductCard({ data }) {
 						<Image
 							src={item.image}
 							alt="product image"
-							height={297}
-							width={269}
+							height={257}
+							width={229}
 							className="rounded-lg pb-2"
 						/>
 						<div className="flex justify-between">
