@@ -54,7 +54,7 @@ export default function Product({ product, hostname }) {
 					<div>
 						<div className="flex flex-col sm:flex-row justify-between flex-grow text-2xl sm:text-4xl font-semibold text-secondary pb-10">
 							<h1>{product.title}</h1>
-							<h1>$ {product.price}</h1>
+							<h1>₹ {product.price}</h1>
 						</div>
 						<p className="text-secondary text-base font-normal">
 							{product.description}

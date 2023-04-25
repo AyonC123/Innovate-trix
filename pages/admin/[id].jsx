@@ -79,7 +79,7 @@ export default function Product({ product, id, hostname }) {
 							<h1 className="text-xs">Enter Name</h1>
 						)}
 						{Price !== "" ? (
-							<h1 className="text-xs">$ {Price}</h1>
+							<h1 className="text-xs">₹ {Price}</h1>
 						) : (
 							<h1 className="text-xs">Enter Price</h1>
 						)}

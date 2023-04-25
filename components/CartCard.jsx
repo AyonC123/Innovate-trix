@@ -32,7 +32,7 @@ export default function CartCard({ data, host, username }) {
 						/>
 						<div className="flex flex-col justify-between font-semibold text-secondary">
 							<h1 className="text-base sm:text-xl">{item.title}</h1>
-							<h1 className="text-sm sm:text-base">$ {item.price}</h1>
+							<h1 className="text-sm sm:text-base">₹ {item.price}</h1>
 						</div>
 						<button
 							className="border-2 border-secondary p-2 rounded-lg"
