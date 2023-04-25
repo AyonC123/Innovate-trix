@@ -14,8 +14,8 @@ export default function ProductCard({ data }) {
 							<Image
 								src={item.image}
 								alt="product image"
-								height={257}
-								width={229}
+								height={357}
+								width={329}
 								className="rounded-lg pb-2"
 							/>
 						</Link>

@@ -49,7 +49,7 @@ export default function Create({ hostname }) {
 				<div className="flex flex-col p-5 py-6 shadow-lg rounded-lg">
 					<Image
 						alt="product image"
-						src="/images/candypink.png"
+						src="/images/placeholder.png"
 						width={250}
 						height={250}
 						className="rounded-lg pb-2"
