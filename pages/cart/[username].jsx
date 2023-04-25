@@ -59,6 +59,10 @@ export default function Cart({ products, username, hostname }) {
 												<p>Total Price</p>
 												<p>$ {price() + 50}</p>
 											</p>
+											<div className="pt-5"></div>
+											<div className="p-2 border-2 border-secondary rounded-lg text-secondary">
+												Proceed to Checkout
+											</div>
 										</div>
 									</div>
 								</div>
