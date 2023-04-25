@@ -19,7 +19,7 @@ export default function Home() {
 					height={306}
 					className="rounded-lg"
 				/>
-				<div className="text-center">
+				<div className="sm:text-center">
 					<h1 className="font-semibold text-primary text-5xl sm:text-6xl pb-5">
 						About Us
 					</h1>
