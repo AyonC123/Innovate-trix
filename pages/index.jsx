@@ -1,6 +1,12 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { useSession } from "next-auth/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+	faEarthAmerica,
+	faWrench,
+	faSprayCan,
+} from "@fortawesome/free-solid-svg-icons";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,16 +44,10 @@ export default function Home() {
 				</h1>
 				<div className="flex flex-wrap justify-evenly gap-20">
 					<div className="p-1 sm:p-10 rounded-lg shadow-lg text-center items-center flex flex-col">
-						<Image
-							src={
-								"https://www.shutterstock.com/image-vector/vector-cartoon-aerosol-spray-red-600w-305970836.jpg"
-							}
-							alt="item image"
-							width={136}
-							height={136}
-							className="rounded-lg pb-10"
+						<FontAwesomeIcon
+							icon={faSprayCan}
+							className="pb-10 text-secondary text-6xl"
 						/>
-
 						<p className="text-xs sm:text-base w-64">
 							Sprayons are quite easy to use. All you need to do is wear some
 							socks and aim the spray can at them. Now you can start spraying!
@@ -57,16 +57,10 @@ export default function Home() {
 						</p>
 					</div>
 					<div className="p-1 sm:p-10 rounded-lg shadow-lg text-center items-center flex flex-col">
-						<Image
-							src={
-								"https://www.shutterstock.com/image-vector/vector-cartoon-aerosol-spray-red-600w-305970836.jpg"
-							}
-							alt="item image"
-							width={136}
-							height={136}
-							className="rounded-lg pb-10 pt-5"
+						<FontAwesomeIcon
+							icon={faEarthAmerica}
+							className="pb-10 text-secondary text-6xl"
 						/>
-
 						<p className="text-xs sm:text-base w-64">
 							The sprays contain two polymers along with a separator. On
 							spraying in the atmosphere, the separator evaporates, almost
@@ -77,16 +71,10 @@ export default function Home() {
 						</p>
 					</div>
 					<div className="p-1 sm:p-10 rounded-lg shadow-lg text-center items-center flex flex-col">
-						<Image
-							src={
-								"https://www.shutterstock.com/image-vector/vector-cartoon-aerosol-spray-red-600w-305970836.jpg"
-							}
-							alt="item image"
-							width={136}
-							height={136}
-							className="rounded-lg pb-10"
+						<FontAwesomeIcon
+							icon={faWrench}
+							className="pb-10 text-secondary text-6xl"
 						/>
-
 						<p className="text-xs sm:text-base w-64">
 							Along with the spray, we also provide the separator in liquid
 							form. Once done wearing, the shoes can be dipped in a solution
