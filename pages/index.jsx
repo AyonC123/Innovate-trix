@@ -23,7 +23,7 @@ export default function Home() {
 					<h1 className="font-semibold text-primary text-5xl sm:text-6xl pb-5">
 						About Us
 					</h1>
-					<p className="text-sm sm:text-xl w-60">
+					<p className="text-sm sm:text-xl w-60 sm:w-96">
 						Have you ever spent hours looking for shoes and then when you
 						finally find the perfect color, your size is not available? Well
 						worry not, because Sprayons is a one of a kind product where you
