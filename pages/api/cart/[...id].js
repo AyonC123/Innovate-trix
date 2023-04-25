@@ -9,6 +9,9 @@ export default async function handler(req, res) {
 		case "GET":
 			const user = await db.collection("users").findOne({ username: id[0] });
 			if (user === null) {
+				const create = await db
+					.collection("users")
+					.insertOne({ username: id[0], cart: [] });
 				res.json([]);
 			}
 			const cart = user["cart"];
