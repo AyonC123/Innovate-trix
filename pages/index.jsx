@@ -45,6 +45,19 @@ export default function Home() {
 				<div className="flex flex-wrap justify-evenly gap-20">
 					<div className="p-1 sm:p-10 rounded-lg shadow-lg text-center items-center flex flex-col">
 						<FontAwesomeIcon
+							icon={faWrench}
+							className="pb-10 text-secondary text-6xl"
+						/>
+						<p className="text-xs sm:text-base w-64">
+							Along with the spray, we also provide the separator in liquid
+							form. Once done wearing, the shoes can be dipped in a solution
+							containing the separator. This converts the product back to liquid
+							form and now can be sprayed on your shoe (or someone else’s) at a
+							later time! 1st feature ko thoda badhana hai
+						</p>
+					</div>
+					<div className="p-1 sm:p-10 rounded-lg shadow-lg text-center items-center flex flex-col">
+						<FontAwesomeIcon
 							icon={faSprayCan}
 							className="pb-10 text-secondary text-6xl"
 						/>
@@ -68,19 +81,6 @@ export default function Home() {
 							the fabric that makes our shoes. All ingredients in the spray are
 							non-toxic for humans along with being biodegradable. The separator
 							released in the air does not cause harm to the ozone layer.
-						</p>
-					</div>
-					<div className="p-1 sm:p-10 rounded-lg shadow-lg text-center items-center flex flex-col">
-						<FontAwesomeIcon
-							icon={faWrench}
-							className="pb-10 text-secondary text-6xl"
-						/>
-						<p className="text-xs sm:text-base w-64">
-							Along with the spray, we also provide the separator in liquid
-							form. Once done wearing, the shoes can be dipped in a solution
-							containing the separator. This converts the product back to liquid
-							form and now can be sprayed on your shoe (or someone else’s) at a
-							later time! 1st feature ko thoda badhana hai
 						</p>
 					</div>
 				</div>
