@@ -17,7 +17,7 @@ export default function Home() {
 			<div className="flex justify-center font-bold text-9xl text-secondary py-20 sm:py-96 bg-[url('/background.jpg')] bg-contain bg-center bg-no-repeat"></div>
 			<main className="flex flex-wrap justify-evenly basis-40 sm:pb-24 pt-5 sm:pt-20 gap-10">
 				<Image
-					src={"/images/shoe.png"}
+					src={"/images/candypink.png"}
 					alt="Product Image"
 					width={406}
 					height={406}
