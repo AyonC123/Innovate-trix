@@ -12,7 +12,7 @@ export default function AdminEmailCard({ data }) {
 						<h1>Subject: {item.subject}</h1>
 						<h1 className="sm:hidden">Message: {item.message}</h1>
 					</div>
-					<h1 className="hidden sm:block font-bold">Description</h1>
+					<h1 className="hidden sm:block font-bold">Message</h1>
 					<p className="hidden sm:block">{item.message}</p>
 				</div>
 			))}
