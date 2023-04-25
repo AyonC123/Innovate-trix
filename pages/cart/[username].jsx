@@ -58,7 +58,7 @@ export default function Cart({ products, username, hostname }) {
 												</p>
 												<p className="border-b-2 border-lightgrey py-4 flex justify-between">
 													<p>Total Price</p>
-													<p>$ {price() + 50}</p>
+													<p>₹ {price() + 50}</p>
 												</p>
 												<div className="pt-5"></div>
 												<div className="p-2 border-2 border-secondary rounded-lg text-secondary">
