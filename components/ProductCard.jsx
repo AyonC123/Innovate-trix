@@ -10,17 +10,17 @@ export default function ProductCard({ data }) {
 						key={item._id}
 						className="flex flex-col p-5 py-6 shadow-lg rounded-lg"
 					>
-						<Image
-							src={item.image}
-							alt="product image"
-							height={257}
-							width={229}
-							className="rounded-lg pb-2"
-						/>
+						<Link href={`/shop/${item._id}`}>
+							<Image
+								src={item.image}
+								alt="product image"
+								height={257}
+								width={229}
+								className="rounded-lg pb-2"
+							/>
+						</Link>
 						<div className="flex justify-between">
-							<Link href={`/shop/${item._id}`}>
-								<h1 className="text-xs">{item.title}</h1>
-							</Link>
+							<h1 className="text-xs">{item.title}</h1>
 							<h1 className="text-xs">₹ {item.price}</h1>
 						</div>
 					</div>
