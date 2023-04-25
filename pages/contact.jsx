@@ -80,7 +80,7 @@ export default function Contact({ hostname }) {
 					onSubmit={handleSubmit}
 					className="flex basis-auto flex-col justify-evenly gap-16 items-center"
 				>
-					<div>
+					<div className="flex flex-col sm:flex-row justify-evenly flex-wrap">
 						<input
 							type="text"
 							name="Name"
@@ -114,7 +114,7 @@ export default function Contact({ hostname }) {
 						rows="5"
 						cols="87"
 						placeholder="Description"
-						className="p-2 rounded-lg outline-none resize-none"
+						className="p-2 rounded-lg outline-none resize-none w-60 md:w-fit"
 						value={Message}
 						onChange={(e) => setMessage(e.target.value)}
 						required={true}

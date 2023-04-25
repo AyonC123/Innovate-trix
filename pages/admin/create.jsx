@@ -45,7 +45,7 @@ export default function Create({ hostname }) {
 	};
 	return (
 		<>
-			<div className="flex justify-evenly flex-wrap">
+			<div className="flex justify-evenly flex-wrap gap-5">
 				<div className="flex flex-col p-5 py-6 shadow-lg rounded-lg">
 					<Image
 						alt="product image"
@@ -78,7 +78,7 @@ export default function Create({ hostname }) {
 						value={Photo}
 						onChange={(e) => setPhoto(e.target.value)}
 						placeholder="Image"
-						className="rounded-lg p-2 outline-none"
+						className="rounded-lg p-2 outline-none w-60 sm:w-auto"
 						required={true}
 					/>
 					<input
@@ -88,7 +88,7 @@ export default function Create({ hostname }) {
 						value={Title}
 						onChange={(e) => setTitle(e.target.value)}
 						placeholder="Name"
-						className="rounded-lg p-2 outline-none"
+						className="rounded-lg p-2 outline-none w-60 sm:w-auto"
 						required={true}
 					/>
 					<input
@@ -97,7 +97,7 @@ export default function Create({ hostname }) {
 						value={Price}
 						onChange={(e) => setPrice(e.target.value)}
 						placeholder="Price"
-						className="rounded-lg p-2 outline-none"
+						className="rounded-lg p-2 outline-none w-60 sm:w-auto"
 						required={true}
 					/>
 					<textarea
@@ -108,7 +108,7 @@ export default function Create({ hostname }) {
 						value={Description}
 						onChange={(e) => setDescription(e.target.value)}
 						placeholder="Description"
-						className="rounded-lg p-2 outline-none resize-none"
+						className="rounded-lg p-2 outline-none resize-none w-60 sm:w-auto"
 						required={true}
 					></textarea>
 					<button

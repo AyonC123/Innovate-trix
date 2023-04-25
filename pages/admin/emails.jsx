@@ -37,12 +37,12 @@ export default function Emails({ emails }) {
 								name="search"
 								value={Search}
 								onChange={(e) => setSearch(e.target.value)}
-								className="rounded-lg p-2 outline-none"
+								className="rounded-lg p-2 outline-none w-24 sm:w-auto"
 								placeholder="Search"
 							/>
 						</form>
 					</div>
-					<div className="flex justify-between text-secondary font-bold">
+					<div className="hidden sm:flex justify-between text-secondary font-bold">
 						<h1>Name</h1>
 						<h1>Email</h1>
 						<h1>Subject</h1>

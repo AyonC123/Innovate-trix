@@ -21,7 +21,7 @@ export default function CartCard({ data, host, username }) {
 				{data.map((item) => (
 					<div
 						key={item._id}
-						className="flex gap-16 items-center p-5 py-6 border-b-2 border-lightgrey"
+						className="flex flex-col sm:flex-row gap-5 sm:gap-16 items-center p-5 py-6 border-b-2 border-lightgrey"
 					>
 						<Image
 							src={item.image}
@@ -31,8 +31,8 @@ export default function CartCard({ data, host, username }) {
 							className="rounded-lg pb-2"
 						/>
 						<div className="flex flex-col justify-between font-semibold text-secondary">
-							<h1 className="text-xl">{item.title}</h1>
-							<h1 className="text-base">$ {item.price}</h1>
+							<h1 className="text-base sm:text-xl">{item.title}</h1>
+							<h1 className="text-sm sm:text-base">$ {item.price}</h1>
 						</div>
 						<button
 							className="border-2 border-secondary p-2 rounded-lg"

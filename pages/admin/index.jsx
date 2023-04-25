@@ -30,7 +30,7 @@ export default function Admin({ products }) {
 			>
 				<Sidebar />
 				<div className="flex flex-col px-10 gap-5">
-					<div className="flex justify-between">
+					<div className="flex flex-col sm:flex-row justify-between gap-10">
 						<Link
 							href="/admin/create"
 							className="p-2 rounded-lg text-secondary border-secondary border-2"
@@ -43,14 +43,14 @@ export default function Admin({ products }) {
 								name="search"
 								value={Search}
 								onChange={(e) => setSearch(e.target.value)}
-								className="rounded-lg p-2 outline-none"
+								className="rounded-lg p-2 outline-none w-24 sm:w-auto"
 								placeholder="Search"
 							/>
 						</form>
 					</div>
 					<div className="flex justify-between text-secondary font-bold">
 						<h1>Name</h1>
-						<h1>Price</h1>
+						<h1 className="hidden sm:block">Price</h1>
 					</div>
 					<AdminCard data={data} />
 				</div>

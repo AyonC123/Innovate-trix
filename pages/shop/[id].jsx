@@ -52,7 +52,7 @@ export default function Product({ product, hostname }) {
 				/>
 				<div className="w-96 h-96 flex flex-col justify-between">
 					<div>
-						<div className="flex justify-between flex-grow text-4xl font-semibold text-secondary pb-10">
+						<div className="flex flex-col sm:flex-row justify-between flex-grow text-2xl sm:text-4xl font-semibold text-secondary pb-10">
 							<h1>{product.title}</h1>
 							<h1>$ {product.price}</h1>
 						</div>
@@ -73,7 +73,7 @@ export default function Product({ product, hostname }) {
 							</button>
 						</div>
 					) : (
-						<div className="flex justify-center text-secondary font-bold text-2xl">
+						<div className="flex justify-center text-secondary font-bold  text-xl sm:text-2xl">
 							<h1>Log in to Buy</h1>
 						</div>
 					)}

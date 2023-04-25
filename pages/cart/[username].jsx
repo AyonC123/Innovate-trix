@@ -34,10 +34,10 @@ export default function Cart({ products, username, hostname }) {
 						{session.user.name === username ? (
 							<>
 								<div className="flex flex-col justify-center items-center">
-									<h1 className="font-bold text-secondary text-4xl pb-10">
+									<h1 className="font-bold text-secondary text-2xl sm:text-4xl pb-10">
 										Your Cart
 									</h1>
-									<div className="grid justify-between items-center gap-20 grid-cols-2">
+									<div className="flex  flex-col-reverse sm:flex-row justify-between items-center gap-20">
 										<CartCard
 											data={products.sort()}
 											host={hostname}
